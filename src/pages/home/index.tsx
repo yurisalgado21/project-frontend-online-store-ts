@@ -1,5 +1,7 @@
+
 import { useEffect, useState } from 'react';
 import { getCategories } from '../../services/api';
+import { Link } from 'react-router-dom';
 
 type Categorie = {
   id: string,
@@ -35,6 +37,9 @@ export default function Home() {
         <p data-testid="home-initial-message">
           Digite algum termo de pesquisa ou escolha uma categoria.
         </p>
+        <Link to="/carrinho" data-testid="shopping-cart-button">
+          Ir para o Carrinho
+        </Link>
       </main>
     </>
   );
