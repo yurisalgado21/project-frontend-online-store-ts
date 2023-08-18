@@ -6,7 +6,16 @@ import { getProductById } from '../services/api';
 export default function ProductDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [product, setProduct] = useState<Product>();
+  const [product, setProduct] = useState<Product | undefined>();
+  const [cartProduct, setCartProduct] = useState<Product[]>([]);
+
+  const handleAddProduct = () => {
+    if (product) {
+      const updateCartProduct = [...cartProduct, product];
+      setCartProduct(updateCartProduct);
+      localStorage.setItem('cartProduct', JSON.stringify(updateCartProduct));
+    }
+  };
 
   useEffect(() => {
     const getById = async () => {
@@ -14,7 +23,7 @@ export default function ProductDetails() {
       setProduct(dataProduct);
     };
     getById();
-  }, []);
+  }, [id]);
 
   const handleClick = () => {
     navigate('/carrinho');
@@ -30,6 +39,13 @@ export default function ProductDetails() {
           alt="product-foto"
         />
         <p data-testid="product-detail-price">{product?.price}</p>
+        <button
+          data-testid="product-detail-add-to-cart"
+          onClick={ handleAddProduct }
+        >
+          Adicionar ao carrinho
+
+        </button>
       </li>
       <button
         data-testid="shopping-cart-button"
