@@ -27,6 +27,7 @@ function ShoppingCartPage() {
           );
         })
         : <p data-testid="shopping-cart-empty-message">Seu carrinho está vazio</p>}
+      <p data-testid="shopping-cart-empty-message">Seu carrinho está vazio</p>
     </div>
   );
 }
