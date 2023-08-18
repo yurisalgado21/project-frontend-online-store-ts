@@ -77,13 +77,11 @@ export default function Home() {
           Ir para o Carrinho
         </Link>
         {products ? products.map((product) => {
-          const { id, price, title, thumbnail } = product;
+          const { id } = product;
           return (
             <ProductCard
               key={ id }
-              price={ price }
-              title={ title }
-              thumbnail={ thumbnail }
+              product={ product }
             />
           );
         }) : <p>Nenhum produto foi encontrado</p>}
