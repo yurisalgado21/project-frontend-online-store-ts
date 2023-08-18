@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Product } from '../types';
 
 type ProductCartProps = {
@@ -5,7 +6,7 @@ type ProductCartProps = {
 };
 
 function ProductCard({ product }: ProductCartProps) {
-  const { title, thumbnail, price } = product;
+  const { title, thumbnail, price, id } = product;
   const handleAddProductToShoppingCart = () => {
     const shoppingCartProducts = localStorage.getItem('shoppingCartProducts');
     if (shoppingCartProducts) {
@@ -20,7 +21,12 @@ function ProductCard({ product }: ProductCartProps) {
   };
   return (
     <div data-testid="product">
-      <p>{title}</p>
+      <Link
+        data-testid="product-detail-link"
+        to={ `/product/${id}` }
+      >
+        <p>{title}</p>
+      </Link>
       <img src={ thumbnail } alt={ title } />
       <p>{price}</p>
       <button
