@@ -1,7 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Product } from '../types';
 
-function ProductCard({ id, title, thumbnail, price }: Product) {
+type ProductCartProps = {
+  product: Product,
+};
+
+function ProductCard({ product }: ProductCartProps) {
+  const { title, thumbnail, price, id } = product;
+  const handleAddProductToShoppingCart = () => {
+    const shoppingCartProducts = localStorage.getItem('shoppingCartProducts');
+    if (shoppingCartProducts) {
+      localStorage.setItem('shoppingCartProducts', JSON.stringify(
+        [...JSON.parse(shoppingCartProducts), product],
+      ));
+    } else {
+      localStorage.setItem('shoppingCartProducts', JSON.stringify(
+        [product],
+      ));
+    }
+  };
   return (
     <div data-testid="product">
       <Link
@@ -9,9 +26,15 @@ function ProductCard({ id, title, thumbnail, price }: Product) {
         to={ `/product/${id}` }
       >
         <p>{title}</p>
-        <img src={ thumbnail } alt={ title } />
-        <p>{price}</p>
       </Link>
+      <img src={ thumbnail } alt={ title } />
+      <p>{price}</p>
+      <button
+        data-testid="product-add-to-cart"
+        onClick={ handleAddProductToShoppingCart }
+      >
+        Adicionar ao Carrinho
+      </button>
     </div>
   );
 }
