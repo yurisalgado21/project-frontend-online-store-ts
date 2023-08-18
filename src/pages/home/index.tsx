@@ -81,6 +81,7 @@ export default function Home() {
           return (
             <ProductCard
               key={ id }
+              id={ id }
               price={ price }
               title={ title }
               thumbnail={ thumbnail }

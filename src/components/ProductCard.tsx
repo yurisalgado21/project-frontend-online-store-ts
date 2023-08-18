@@ -1,11 +1,17 @@
+import { Link } from 'react-router-dom';
 import { Product } from '../types';
 
-function ProductCard({ title, thumbnail, price }: Product) {
+function ProductCard({ id, title, thumbnail, price }: Product) {
   return (
     <div data-testid="product">
-      <p>{title}</p>
-      <img src={ thumbnail } alt={ title } />
-      <p>{price}</p>
+      <Link
+        data-testid="product-detail-link"
+        to={ `/product/${id}` }
+      >
+        <p>{title}</p>
+        <img src={ thumbnail } alt={ title } />
+        <p>{price}</p>
+      </Link>
     </div>
   );
 }
