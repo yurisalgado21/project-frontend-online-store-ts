@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getCategories, getProductsFromQuery } from '../../services/api';
+import {
+  getCategories,
+  getProductsFromCategory,
+  getProductsFromQuery,
+} from '../../services/api';
 import ProductCard from '../../components/ProductCard';
 
 import { Product } from '../../types';
@@ -33,6 +37,11 @@ export default function Home() {
     setProducts(productsData.results);
   };
 
+  const handleCategoryClick = async (category: string) => {
+    const productsData = await getProductsFromCategory(category as string);
+    setProducts(productsData.results);
+  };
+
   return (
     <>
       <aside>
@@ -40,7 +49,12 @@ export default function Home() {
         {categories && categories.map((category) => (
           <div key={ category.id }>
             <label htmlFor={ category.id } data-testid="category">
-              <input type="radio" name="category" id={ category.id } />
+              <input
+                type="radio"
+                name="category"
+                id={ category.id }
+                onClick={ () => handleCategoryClick(category.id) }
+              />
               {category.name}
             </label>
           </div>
