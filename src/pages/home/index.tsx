@@ -59,13 +59,6 @@ export default function Home() {
         <p data-testid="home-initial-message">
           Digite algum termo de pesquisa ou escolha uma categoria.
         </p>
-        <button
-          type="submit"
-          data-testid="query-button"
-          onSubmit={ handleSubmit }
-        >
-          Buscar
-        </button>
         <Link to="/carrinho" data-testid="shopping-cart-button">
           Ir para o Carrinho
         </Link>
