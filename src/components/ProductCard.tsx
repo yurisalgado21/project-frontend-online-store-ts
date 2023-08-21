@@ -7,6 +7,7 @@ type ProductCartProps = {
 
 function ProductCard({ product }: ProductCartProps) {
   const { title, thumbnail, price, id } = product;
+
   const handleAddProductToShoppingCart = () => {
     const shoppingCartProducts = localStorage.getItem('shoppingCartProducts');
     if (shoppingCartProducts) {
@@ -19,6 +20,7 @@ function ProductCard({ product }: ProductCartProps) {
       ));
     }
   };
+
   return (
     <div data-testid="product">
       <Link

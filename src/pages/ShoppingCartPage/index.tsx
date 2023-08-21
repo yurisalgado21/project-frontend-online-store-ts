@@ -12,6 +12,17 @@ function ShoppingCartPage() {
     }
   }, []);
 
+  const addProduct = () => {
+    setShoppingCartProducts((prevShoppingCartProducts) => {
+      [...prevShoppingCartProducts,
+        
+      ]
+    })
+  };
+
+  const removeProduct = () => {
+  };
+
   return (
     <div className="shopping-cart">
       <h2>Seu Carrinho de Compras</h2>
@@ -27,7 +38,6 @@ function ShoppingCartPage() {
           );
         })
         : <p data-testid="shopping-cart-empty-message">Seu carrinho está vazio</p>}
-      <p data-testid="shopping-cart-empty-message">Seu carrinho está vazio</p>
     </div>
   );
 }
