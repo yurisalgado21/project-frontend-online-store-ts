@@ -35,6 +35,14 @@ function ShoppingCartPage() {
     setShoppingCartProducts(newShoppingCartProducts);
   };
 
+  useEffect(() => {
+    const localStorageCart = localStorage.getItem('cartProduct');
+    if (localStorageCart) {
+      const saveCartProduct = JSON.parse(localStorageCart) || [];
+      setShoppingCartProducts(saveCartProduct);
+    }
+  }, []);
+
   return (
     <div className="shopping-cart">
       <h2>Seu Carrinho de Compras</h2>
