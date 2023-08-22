@@ -1,0 +1,30 @@
+:root {
+
+  --white: white;
+
+  --background: #fefefe;
+
+  --main: #dfe5eb;
+
+  --gray-200: #ced4da;
+
+  --grey-300: #94979d;
+
+  --grey-500: #444955;
+
+  --blue-300: #003be5;
+
+  --green-300: #31c28d;
+
+  --shadow: #0000001a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+}

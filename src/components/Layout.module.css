@@ -2,8 +2,8 @@
   align-items: center;
   background-color: var(--blue-300);
   display: flex;
-  justify-content: center;
   height: 100px;
+  justify-content: center;
 }
 
 .container {

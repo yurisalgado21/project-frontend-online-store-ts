@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -15,14 +14,14 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   width: 100%;
 }
 
 .container-top button {
   margin-left: 0.1rem;
 }
-  
+
 .container-top a {
   margin-left: 0.1rem;
 }
@@ -35,7 +34,7 @@
 }
 
 .aside {
-  align-items:flex-start;
+  align-items: flex-start;
   border: 1px solid var(--gray-200);
   box-shadow: 1px 1px 4px 1px var(--shadow);
   color: var(--grey-500);
@@ -49,8 +48,8 @@
 }
 
 .title {
-  color: #000;
-  font-family: Epilogue;
+  color: black;
+  font-family: Epilogue , sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -64,8 +63,8 @@ hr {
   display: flex;
   justify-content: center;
   margin: 0.5rem;
-  margin-top: 1rem;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
   width: 15rem;
 }
 
@@ -75,7 +74,7 @@ hr {
 }
 
 .input {
-  background: #FFF;
+  background: white;
   border: 1px solid #3a3939;
   border-radius: 0.3rem;
   flex-shrink: 0;
@@ -91,8 +90,8 @@ hr {
 }
 
 .paragraph {
-  color: #31C28D;
-  font-family: Epilogue, sans-serif;
+  color: #31c28d;
+  font-family: Epilogue , sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
@@ -103,8 +102,8 @@ hr {
 }
 
 .paragraphNot {
-  color: #94979D;
-  font-family: Epilogue, sans-serif;
+  color: #94979d;
+  font-family: Epilogue , sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -113,5 +112,5 @@ hr {
 }
 
 .link {
-  color: #31C28D;
+  color: #31c28d;
 }
