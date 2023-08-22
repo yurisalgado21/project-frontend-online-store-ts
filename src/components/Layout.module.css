@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-300);
+    height: 100px;
+}
+
+.container {
+    display: flex;
+}
