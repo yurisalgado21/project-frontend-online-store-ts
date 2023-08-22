@@ -39,6 +39,10 @@ export default function ProductDetails() {
           alt="product-foto"
         />
         <p data-testid="product-detail-price">{product?.price}</p>
+        {
+          product?.shipping.free_shipping
+            && <p data-testid="free-shipping">Frete Grátis</p>
+        }
         <button
           data-testid="product-detail-add-to-cart"
           onClick={ handleAddProduct }

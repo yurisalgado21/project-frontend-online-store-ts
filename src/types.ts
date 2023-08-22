@@ -3,4 +3,7 @@ export type Product = {
   price: number,
   thumbnail: string,
   title: string,
+  shipping: {
+    free_shipping: boolean
+  }
 };
