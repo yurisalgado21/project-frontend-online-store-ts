@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 import Home from './pages/home';
 import ShoppingCartPage from './pages/ShoppingCartPage';
 import ProductDetails from './components/ProductDetails';
@@ -29,19 +28,19 @@ function App() {
       <Route path="/" element={ <Layout /> }>
         <Route index element={ <Home /> } />
         <Route
-         path="/carrinho"
+          path="/carrinho"
           element={ <ShoppingCartPage
-           shoppingCartProducts={ shoppingCartProducts }
-           setShoppingCartProducts={ updateShoppingCartProducts }
-         /> }
-       />
-       <Route path="/product/:id" element={ <ProductDetails /> } />
-       <Route
+            shoppingCartProducts={ shoppingCartProducts }
+            setShoppingCartProducts={ updateShoppingCartProducts }
+          /> }
+        />
+        <Route path="/product/:id" element={ <ProductDetails /> } />
+        <Route
           path="/checkout"
-         element={ <Checkout
-           shoppingCartProducts={ shoppingCartProducts }
+          element={ <Checkout
+            shoppingCartProducts={ shoppingCartProducts }
             emptyCart={ emptyCart }
-         /> }
+          /> }
         />
       </Route>
     </Routes>
