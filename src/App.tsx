@@ -29,19 +29,19 @@ function App() {
       <Route path="/" element={ <Layout /> }>
         <Route index element={ <Home /> } />
         <Route
-         path="/carrinho"
+          path="/carrinho"
           element={ <ShoppingCartPage
-           shoppingCartProducts={ shoppingCartProducts }
-           setShoppingCartProducts={ updateShoppingCartProducts }
-         /> }
-       />
-       <Route path="/product/:id" element={ <ProductDetails /> } />
-       <Route
+            shoppingCartProducts={ shoppingCartProducts }
+            setShoppingCartProducts={ updateShoppingCartProducts }
+          /> }
+        />
+        <Route path="/product/:id" element={ <ProductDetails /> } />
+        <Route
           path="/checkout"
-         element={ <Checkout
-           shoppingCartProducts={ shoppingCartProducts }
+          element={ <Checkout
+            shoppingCartProducts={ shoppingCartProducts }
             emptyCart={ emptyCart }
-         /> }
+          /> }
         />
       </Route>
     </Routes>
