@@ -1,11 +1,11 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--blue-300);
-    height: 100px;
+  align-items: center;
+  background-color: var(--blue-300);
+  display: flex;
+  justify-content: center;
+  height: 100px;
 }
 
 .container {
-    display: flex;
+  display: flex;
 }
