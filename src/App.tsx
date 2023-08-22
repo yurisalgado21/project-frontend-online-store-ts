@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/home';
 import ShoppingCartPage from './pages/ShoppingCartPage';
 import ProductDetails from './components/ProductDetails';
+import Layout from './components/Layout';
 import Checkout from './pages/Checkout';
 import { Product } from './types';
 
@@ -25,22 +26,24 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={ <Home /> } />
-      <Route
-        path="/carrinho"
-        element={ <ShoppingCartPage
-          shoppingCartProducts={ shoppingCartProducts }
-          setShoppingCartProducts={ updateShoppingCartProducts }
-        /> }
-      />
-      <Route path="/product/:id" element={ <ProductDetails /> } />
-      <Route
-        path="/checkout"
-        element={ <Checkout
-          shoppingCartProducts={ shoppingCartProducts }
-          emptyCart={ emptyCart }
-        /> }
-      />
+      <Route path="/" element={ <Layout /> }>
+        <Route index element={ <Home /> } />
+        <Route
+         path="/carrinho"
+          element={ <ShoppingCartPage
+           shoppingCartProducts={ shoppingCartProducts }
+           setShoppingCartProducts={ updateShoppingCartProducts }
+         /> }
+       />
+       <Route path="/product/:id" element={ <ProductDetails /> } />
+       <Route
+          path="/checkout"
+         element={ <Checkout
+           shoppingCartProducts={ shoppingCartProducts }
+            emptyCart={ emptyCart }
+         /> }
+        />
+      </Route>
     </Routes>
   );
 }

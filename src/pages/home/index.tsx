@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {
   getCategories,
   getProductsFromCategory,
@@ -8,6 +9,8 @@ import {
 import ProductCard from '../../components/ProductCard';
 
 import { Product } from '../../types';
+import styles from './home.module.css';
+import buttonSearch from '../../assets/Vector (1).svg';
 
 type Categorie = {
   id: string,
@@ -44,11 +47,16 @@ export default function Home() {
 
   return (
     <>
-      <aside>
-        <p>Categorias:</p>
+      <aside className={ styles.aside }>
+        <p className={ styles.title }>Categorias:</p>
+        <hr />
         {categories && categories.map((category) => (
           <div key={ category.id }>
-            <label htmlFor={ category.id } data-testid="category">
+            <label
+              className={ styles.category }
+              htmlFor={ category.id }
+              data-testid="category"
+            >
               <input
                 type="radio"
                 name="category"
@@ -60,31 +68,45 @@ export default function Home() {
           </div>
         ))}
       </aside>
-      <main>
-        <input
-          type="text"
-          data-testid="query-input"
-          onChange={ handleInputChange }
-          value={ query }
-        />
-        <button type="submit" data-testid="query-button" onClick={ handleClick }>
-          Pesquisar
-        </button>
-        <p data-testid="home-initial-message">
-          Digite algum termo de pesquisa ou escolha uma categoria.
-        </p>
-        <Link to="/carrinho" data-testid="shopping-cart-button">
-          Ir para o Carrinho
-        </Link>
-        {products ? products.map((product) => {
-          const { id } = product;
-          return (
-            <ProductCard
-              key={ id }
-              product={ product }
+      <main className={ styles.container }>
+        <div className={ styles['container-top'] }>
+          <input
+            className={ styles.input }
+            type="text"
+            data-testid="query-input"
+            placeholder="Digite o que você busca"
+            onChange={ handleInputChange }
+            value={ query }
+          />
+          <button type="submit" data-testid="query-button" onClick={ handleClick }>
+            <img
+              className={ styles.buttonSearch }
+              src={ buttonSearch }
+              alt="button-search"
             />
-          );
-        }) : <p>Nenhum produto foi encontrado</p>}
+          </button>
+          <Link
+            className={ styles.link }
+            to="/carrinho"
+            data-testid="shopping-cart-button"
+          >
+            <ShoppingCartIcon />
+          </Link>
+        </div>
+        <div className={ styles['container-bottom'] }>
+          <p className={ styles.paragraph } data-testid="home-initial-message">
+            Digite algum termo de pesquisa ou escolha uma categoria.
+          </p>
+          {products ? products.map((product) => {
+            const { id } = product;
+            return (
+              <ProductCard
+                key={ id }
+                product={ product }
+              />
+            );
+          }) : <p className={ styles.paragraphNot }>Nenhum produto foi encontrado</p>}
+        </div>
       </main>
     </>
   );
