@@ -31,6 +31,8 @@ function ProductCard({ product }: ProductCartProps) {
       </Link>
       <img src={ thumbnail } alt={ title } />
       <p>{price}</p>
+      {product.shipping.free_shipping
+        && <p data-testid="free-shipping">Frete Grátis</p>}
       <button
         data-testid="product-add-to-cart"
         onClick={ handleAddProductToShoppingCart }
