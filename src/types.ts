@@ -7,3 +7,13 @@ export type Product = {
     free_shipping: boolean
   }
 };
+
+export type FormValues = {
+  nome?: string,
+  email?: string,
+  cpf?: string,
+  telefone?: string,
+  cep?: string,
+  endereço?: string,
+  pagamento?: string
+};
