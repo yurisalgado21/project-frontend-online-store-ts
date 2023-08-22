@@ -33,19 +33,16 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (
-      !nome
-        || !email
-        || !cpf
-        || !telefone
-        || !cep
-        || !endereço
-        || pagamento === ''
-    ) {
+    if (!nome
+      || !email
+      || !cpf
+      || !telefone
+      || !cep
+      || !endereço
+      || !pagamento) {
       setErrorMsg(true);
     } else {
       setErrorMsg(false);
-      //   localStorage.clear();
       emptyCart();
       navigate('/');
     }
@@ -62,10 +59,11 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
               {product.title}
             </p>
             <p>
-              {`R$ ${product.price}`}
+              <p>{`R$ ${product.price.toFixed(2)}`}</p>
             </p>
           </div>
         ))}
+        <div />
       </div>
       <div>
         <form onSubmit={ onSubmit }>
@@ -78,7 +76,6 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
               data-testid="checkout-fullname"
               onChange={ onChange }
               value={ nome }
-              required
             />
           </label>
 
@@ -91,7 +88,6 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
               data-testid="checkout-email"
               onChange={ onChange }
               value={ email }
-              required
             />
           </label>
 
@@ -104,7 +100,6 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
               data-testid="checkout-cpf"
               onChange={ onChange }
               value={ cpf }
-              required
             />
           </label>
 
@@ -117,7 +112,6 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
               data-testid="checkout-phone"
               onChange={ onChange }
               value={ telefone }
-              required
             />
           </label>
           <label htmlFor="cep">
@@ -129,7 +123,6 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
               data-testid="checkout-cep"
               onChange={ onChange }
               value={ cep }
-              required
             />
           </label>
           <label htmlFor="endereço">
@@ -141,11 +134,10 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
               data-testid="checkout-address"
               onChange={ onChange }
               value={ endereço }
-              required
             />
           </label>
 
-          <h2>Método de pagamento</h2>
+          <h2>Forma de pagamento</h2>
           <label htmlFor="boleto">
             <input
               data-testid="ticket-payment"
@@ -203,8 +195,7 @@ function Checkout({ shoppingCartProducts, emptyCart }: CheckoutProps) {
           >
             Comprar
           </button>
-
-          { errorMsg && <h1 data-testid="error-msg">Campos inválidos</h1> }
+          { errorMsg && <p data-testid="error-msg">Campos inválidos</p> }
         </form>
       </div>
     </div>
