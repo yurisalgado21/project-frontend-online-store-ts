@@ -1,4 +1,5 @@
-Projeto Loja Online Simplificada
+## Projeto Loja Online Simplificada
+
 Este projeto consiste na criação de uma versão simplificada de uma loja online, sem persistência em banco de dados, com o objetivo de desenvolver em grupo funcionalidades com base em demandas definidas em um quadro Kanban, proporcionando uma experiência próxima ao mercado de trabalho.
 
 Funcionalidades
