@@ -19,11 +19,14 @@ Aplicação das habilidades desenvolvidas no módulo de Front-end.
 Contribuidores
 Este projeto foi realizado em colaboração com os seguintes membros:
 
-## Claus Haas: https://github.com/claushaas
-## Mari Ramiro: https://github.com/MariRamiro
-## Elisa Borba: https://github.com/ElisaBorba
-## Eudes Andrade: https://github.com/andradeeudes
-Instruções de Uso
+<div>
+  <p>Claus Haas: https://github.com/claushaas</p>
+  <p>Mari Ramiro: https://github.com/MariRamiro</p>
+  <p>Elisa Borba: https://github.com/ElisaBorba</p>
+  <p>Eudes Andrade: https://github.com/andradeeudes</p>  
+</div>
+
+## Instruções de Uso
 Para executar localmente este projeto, siga as instruções abaixo:
 
 Clone este repositório.
