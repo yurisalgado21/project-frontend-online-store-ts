@@ -20,10 +20,11 @@ Contribuidores
 Este projeto foi realizado em colaboração com os seguintes membros:
 
 <div>
+  <p>Yuri(Eu): https://github.com/yurisalgado21</p>
   <p>Claus Haas: https://github.com/claushaas</p>
   <p>Mari Ramiro: https://github.com/MariRamiro</p>
   <p>Elisa Borba: https://github.com/ElisaBorba</p>
-  <p>Eudes Andrade: https://github.com/andradeeudes</p>  
+  <p>Eudes Andrade: https://github.com/andradeeudes</p>
 </div>
 
 ## Instruções de Uso
