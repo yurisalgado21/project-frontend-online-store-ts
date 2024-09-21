@@ -1,23 +1,22 @@
-## Projeto Loja Online Simplificada
+Projeto: Loja Online Simplificada
 
-Este projeto consiste na criação de uma versão simplificada de uma loja online, sem persistência em banco de dados, com o objetivo de desenvolver em grupo funcionalidades com base em demandas definidas em um quadro Kanban, proporcionando uma experiência próxima ao mercado de trabalho.
+Este projeto é uma versão simplificada de uma loja online, desenvolvida em grupo, sem persistência em banco de dados. O objetivo é simular um ambiente de desenvolvimento próximo ao mercado de trabalho, aplicando metodologias ágeis e práticas de trabalho em equipe para implementar funcionalidades definidas em um quadro Kanban.
+Funcionalidades
 
-## Funcionalidades:
-Durante o desenvolvimento deste projeto, foram implementadas as seguintes funcionalidades:
+Durante o desenvolvimento, foram implementadas as seguintes funcionalidades:
 
-## Busca de Produtos: Os usuários podem pesquisar produtos por termos e categorias utilizando a API do Mercado Livre.
-Interatividade com Produtos: Os usuários têm a capacidade de interagir com os produtos pesquisados, adicionando-os e removendo-os de um carrinho de compras em diferentes quantidades.
+    Busca de Produtos: Os usuários podem pesquisar produtos por termos e categorias utilizando a API do Mercado Livre.
+    Interatividade com Produtos: Os usuários podem adicionar e remover produtos do carrinho de compras, ajustando as quantidades conforme necessário.
+    Visualização de Detalhes e Avaliações: Os usuários podem visualizar detalhes e avaliações de produtos, além de criar novas avaliações.
+    Simulação de Finalização de Compra: Permite aos usuários simular a finalização da compra dos itens selecionados no carrinho.
 
-## Visualização de Detalhes e Avaliações: Os usuários podem visualizar detalhes e avaliações prévias de um produto, além de ter a opção de criar novas avaliações.
-Simulação de Finalização de Compra: Os usuários podem simular a finalização da compra dos itens selecionados.
 Habilidades Desenvolvidas
-Durante a execução deste projeto, foram desenvolvidas e praticadas as seguintes habilidades:
 
-Compreensão dos Métodos Ágeis, Kanban e Scrum.
-Trabalho eficaz em equipes utilizando Kanban ou Scrum.
-Aplicação das habilidades desenvolvidas no módulo de Front-end.
-Contribuidores
-Este projeto foi realizado em colaboração com os seguintes membros:
+Este projeto proporcionou o desenvolvimento e prática das seguintes habilidades:
+
+    Compreensão e aplicação de métodos ágeis como Kanban e Scrum.
+    Colaboração eficaz em equipe utilizando frameworks ágeis.
+    Implementação de funcionalidades utilizando conhecimentos adquiridos no módulo de Front-end.
 
 <div>
   <p>Yuri(Eu): https://github.com/yurisalgado21</p>
