@@ -18,21 +18,33 @@ Este projeto proporcionou o desenvolvimento e prática das seguintes habilidades
     Colaboração eficaz em equipe utilizando frameworks ágeis.
     Implementação de funcionalidades utilizando conhecimentos adquiridos no módulo de Front-end.
 
-<div>
-  <p>Yuri(Eu): https://github.com/yurisalgado21</p>
-  <p>Claus Haas: https://github.com/claushaas</p>
-  <p>Mari Ramiro: https://github.com/MariRamiro</p>
-  <p>Elisa Borba: https://github.com/ElisaBorba</p>
-  <p>Eudes Andrade: https://github.com/andradeeudes</p>
-</div>
+Contribuidores
 
-## Instruções de Uso
-Para executar localmente este projeto, siga as instruções abaixo:
+O projeto foi desenvolvido em colaboração pelos seguintes membros:
 
-Clone este repositório.
-Execute o servidor local, caso necessário.
+
+      Yuri(Eu): https://github.com/yurisalgado21
+      Claus Haas: https://github.com/claushaas
+      Mari Ramiro: https://github.com/MariRamiro
+      Elisa Borba: https://github.com/ElisaBorba
+      Eudes Andrade: https://github.com/andradeeudes
+
+Como Executar o Projeto
+
+Para executar o projeto localmente, siga os passos abaixo:
+
+    Clone este repositório:
+
+    bash
+
+    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+    Navegue até o diretório do projeto:
+
+    bash
+
+    cd nome-do-repositorio
+
+Caso necessário, execute o servidor local.
+
 Abra o projeto em seu navegador web.
-## Agradecimentos:
-Agradecemos a todos os contribuidores por seu esforço e dedicação na realização deste projeto.
-
-Este README foi criado com ❤️ usando as melhores práticas de documentação.
